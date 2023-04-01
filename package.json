@@ -1,0 +1,22 @@
+{
+  "name": "chatgpt-dsbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start:ts": "tsc -w",
+    "start:js": "nodemon dist/index.js",
+    "start": "concurrently npm:start:*",
+    "registerCommands": "node dist/registerCommands.js"
+  },
+  "keywords": [],
+  "author": "Alex",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  }
+}
