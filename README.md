@@ -1,4 +1,4 @@
-# OpenAI with NodeJS BACKEND
+# OpenAI with NodeJS
 Discord bot with gpt 3.5 turbo support.
 
 -- You'll need a OpenAI API key
