@@ -7,6 +7,14 @@ const commands = [
     {
         name: 'clear',
         description: 'Clears messages and history',
+    },
+    {
+        name: 'chat-normal-mode',
+        description: 'Switches to normal chat mode. Kind and friendly',
+    },
+    {
+        name: 'chat-evil-mode',
+        description: 'Switches to evil chat mode. Mean and rude',
     }
 ];
 
