@@ -13,6 +13,10 @@ const commands = [
     {
         name: 'chat-evil-mode',
         description: 'Switches to evil chat mode. Mean and rude',
+    },
+    {
+        name: 'help',
+        description: 'Shows commands'
     }
 ];
 const rest = new REST({ version: '10' }).setToken(process.env.BOT_TOKEN);

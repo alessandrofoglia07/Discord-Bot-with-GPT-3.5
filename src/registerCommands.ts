@@ -15,6 +15,10 @@ const commands = [
     {
         name: 'chat-evil-mode',
         description: 'Switches to evil chat mode. Mean and rude',
+    },
+    {
+        name: 'help',
+        description: 'Shows commands'
     }
 ];
 

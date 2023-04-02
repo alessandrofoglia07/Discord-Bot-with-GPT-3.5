@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { Client, IntentsBitField, ActivityType, Attachment } from 'discord.js';
+import { Client, IntentsBitField, ActivityType, Attachment, Embed, EmbedBuilder } from 'discord.js';
 import { Configuration, OpenAIApi } from "openai";
 import { log } from 'console';
 
@@ -147,6 +147,22 @@ client.on('interactionCreate', async (interaction) => {
         interaction.reply('Switched to evil mode. You can now start a new conversation.');
         log('Switched to evil mode.');
     };
+
+    if (interaction.commandName === 'help') {
+
+        const embed = new EmbedBuilder()
+        .setTitle('Commands')
+        .setColor('Random')
+        .addFields(
+            {name: '/clear', value: 'Clears the conversation log'}, 
+            {name: '/chat-normal-mode', value: 'Switches to normal mode'}, 
+            {name: '/chat-evil-mode', value: 'Switches to evil mode'}, 
+            {name: '!image', value: 'Generates an image'}, 
+            {name: '!img', value: 'Generates an image'}, 
+            {name: '/help', value: 'Shows this message'}
+        );
+        interaction.reply({ embeds: [embed] });
+    }
 });
 
 client.login(process.env.BOT_TOKEN);
